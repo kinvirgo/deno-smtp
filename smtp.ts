@@ -193,7 +193,7 @@ export class SmtpClient {
   /**
    * 关闭连接
    */
-  close() {
+  async close() {
     this._conn && this._conn.close();
   }
   private async _connect(config: ConnectOptions) {
