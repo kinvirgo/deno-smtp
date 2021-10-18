@@ -16,17 +16,17 @@ _本库借鉴[deno-smtp](https://deno.land/x/smtp)了许多地方_
 import { SmtpClient } from "./mod.ts";
 
 await smtpClient.connect({
-    hostname: "smtp.163.com",
-    username: "<username>",
-    password: "<password>",
+  hostname: "smtp.163.com",
+  username: "<username>",
+  password: "<password>",
 });
 
 await smtpClient.send({
-    from: "<from email>",
-    to: "<to email>",
-    subject: `邮件主题-(${new Date().toString()})`,
-    text: `这里是邮件内容,验证码：${Math.random().toString().slice(-6)}`,
-    // html : `<h1>验证码：<strong>${Math.random().toString().slice(-6)}</strong><h1>`
+  from: "<from email>",
+  to: "<to email>",
+  subject: `邮件主题-(${new Date().toString()})`,
+  text: `这里是邮件内容,验证码：${Math.random().toString().slice(-6)}`,
+  // html : `<h1>验证码：<strong>${Math.random().toString().slice(-6)}</strong><h1>`
 });
 
 smtpClient.close();
@@ -34,6 +34,6 @@ smtpClient.close();
 
 # 参考文献
 
--   http://www.ruanyifeng.com/blog/2008/06/mime.html
--   https://www.cnblogs.com/blogxjc/p/10591894.html
--   https://www.cnblogs.com/sdgwc/p/3324368.html
+- http://www.ruanyifeng.com/blog/2008/06/mime.html
+- https://www.cnblogs.com/blogxjc/p/10591894.html
+- https://www.cnblogs.com/sdgwc/p/3324368.html
