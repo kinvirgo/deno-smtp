@@ -26,18 +26,18 @@ export enum ContentTransferEncoding {
     "quoted-printable" = "quoted-printable",
 }
 
-interface ConnectOptions {
+export interface ConnectOptions {
     username: string;
     password: string;
     hostname: string;
     port?: number;
 }
 
-interface ConnectTlsOptions extends ConnectOptions {
+export interface ConnectTlsOptions extends ConnectOptions {
     certFile?: string;
 }
 
-interface SendConfig {
+export interface SendConfig {
     from: string;
     to: string;
     subject: string;
